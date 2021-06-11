@@ -1,5 +1,5 @@
 # action.yml
-name: "sayeed89 scan Github Action"
+name: "unify iscan scan Github Action"
 description: "Run sayeed89 scan scan against IaC projects"
 inputs:
   path:
