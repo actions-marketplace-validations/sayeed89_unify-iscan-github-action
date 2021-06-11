@@ -1,8 +1,10 @@
 
-FROM 8801302644/unify-iscan:working
+FROM 8801302644/unify-iscan:test-2
 
 WORKDIR /app
 
-COPY . ./iscan/
+COPY entrypoint.sh .
 
-CMD ["./main", "scan", "-p", "/app/iscan", "--report-formats", "html", "-o", "./results"]
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT [ "/app/entrypoint.sh" ]
