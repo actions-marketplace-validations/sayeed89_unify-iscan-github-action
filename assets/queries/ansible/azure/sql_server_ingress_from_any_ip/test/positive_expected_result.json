@@ -1,0 +1,12 @@
+[
+  {
+    "queryName": "SQLServer Ingress From Any IP",
+    "severity": "HIGH",
+    "line": 8
+  },
+  {
+    "queryName": "SQLServer Ingress From Any IP",
+    "severity": "HIGH",
+    "line": 15
+  }
+]
