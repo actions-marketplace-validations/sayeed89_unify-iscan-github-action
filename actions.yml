@@ -1,6 +1,6 @@
 # action.yml
-name: "ISCAN Github Action"
-description: "Run ISCAN scan against IaC projects"
+name: "unify ISCAN Github Action"
+description: "Run unify ISCAN scan against IaC projects"
 inputs:
   path:
     description: "paths to a file or directories to scan, accepts a comma separated list"
@@ -51,7 +51,7 @@ inputs:
     description: "verbose scan"
 outputs:
   results:
-    description: "the result of ISCAN scan"
+    description: "the result of unify ISCAN scan"
 branding:
   icon: "shield"
   color: "green"
