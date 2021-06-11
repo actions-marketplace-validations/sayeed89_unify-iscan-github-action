@@ -1,0 +1,77 @@
+# action.yml
+name: "unify iscan scan Github Action"
+description: "Runing scans against IaC projects"
+inputs:
+  path:
+    description: "paths to a file or directories to scan, accepts a comma separated list"
+    required: true
+  ignore_on_exit:
+    description: "defines which non-zero exit codes should be ignored (all, results, errors, none)"
+    required: false
+  fail_on:
+    description: "comma separated list of which severities returns exit code !=0"
+    required: false
+  timeout:
+    description: "number of seconds the query has to execute before being canceled"
+    required: false
+  profiling:
+    description: "turns on profiler that prints resource consumption in the logs during the execution (CPU, MEM)"
+    required: false
+  config_path:
+    description: "path to configuration file"
+    required: false
+  platform_type:
+    description: "case insensitive list of platform types to scan"
+    required: false
+  exclude_paths:
+    description: "exclude paths from scan, supports glob, quoted comma separated string example: './shouldNotScan/*,somefile.txt'"
+    required: false
+  exclude_queries:
+    description: exclude queries by providing the query ID
+    required: false
+  exclude_categories:
+    description: exclude categories by providing its name, can be provided multiple times or as a comma separated string
+    required: false
+  exclude_results:
+    description: "exclude results by providing the similarity ID of a result"
+    required: false
+  output_formats:
+    description: "formats in which the results report will be exported (json, sarif)"
+    required: false
+  output_path:
+    description: "file path to store results report (json, sarif)"
+    required: false
+  payload_path:
+    description: "file path to store source internal representation in JSON format"
+    required: false
+  queries:
+    description: 'path to directory with queries (default "./assets/queries")'
+    required: false
+  verbose:
+    description: "verbose scan"
+outputs:
+  results:
+    description: "the result of sayeed89 scan"
+branding:
+  icon: "shield"
+  color: "black"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.ignore_on_exit }}
+    - ${{ inputs.fail_on }}
+    - ${{ inputs.timeout }}
+    - ${{ inputs.profiling }}
+    - ${{ inputs.config }}
+    - ${{ inputs.platform_type }}
+    - ${{ inputs.exclude_paths }}
+    - ${{ inputs.exclude_queries }}
+    - ${{ inputs.exclude_categories }}
+    - ${{ inputs.exclude_results }}
+    - ${{ inputs.output_formats }}
+    - ${{ inputs.output_path }}
+    - ${{ inputs.payload_path }}
+    - ${{ inputs.queries }}
+    - ${{ inputs.verbose }}
