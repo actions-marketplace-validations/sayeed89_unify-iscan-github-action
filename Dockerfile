@@ -1,5 +1,5 @@
 
-FROM 8801302644/unify-iscan:working
+FROM 8801302644/unify-iscan:test-2
 
 WORKDIR /app
 
