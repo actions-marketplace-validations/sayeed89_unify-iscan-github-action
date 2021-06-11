@@ -1,7 +1,0 @@
-[
-	{
-		"queryName": "Container Running With Low UID",
-		"severity": "MEDIUM",
-		"line": 8
-	}
-]
