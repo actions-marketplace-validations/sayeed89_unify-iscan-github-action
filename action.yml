@@ -54,7 +54,7 @@ outputs:
     description: "the result of sayeed89 scan"
 branding:
   icon: "shield"
-  color: "green"
+  color: "black"
 runs:
   using: "docker"
   image: "Dockerfile"
