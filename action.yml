@@ -1,6 +1,6 @@
 # action.yml
 name: "unify iscan scan Github Action"
-description: "Run sayeed89 scan scan against IaC projects"
+description: "Runing scans against IaC projects"
 inputs:
   path:
     description: "paths to a file or directories to scan, accepts a comma separated list"
